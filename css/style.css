@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: rgb(0, 13, 29);
+    --second-bg-color: rgb(3, 17, 37);
+    --text-color: #fff;
+    --main-color: #ff006a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+
+}
+
+/* -------------------- Header section ------------------------------- */
+header {
+    backdrop-filter: blur(30px);
+    z-index: 1000;
+    box-shadow: 0 0 50px 0 #000000;
+}
+
+.logo {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--text-color) !important;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo span {
+    color: var(--main-color);
+
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-link {
+    font-weight: 700 !important;
+    color: var(--text-color) !important;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: var(--main-color) !important;
+}
+
+.nav-item:active {
+    color: var(--main-color) !important;
+}
+
+.fa-bars-staggered {
+    color: var(--text-color);
+    font-size: 25px;
+    outline: none !important;
+}
+
+/* -------------------- Main section ------------------------------- */
+#main_page {
+    background-color: var(--second-bg-color);
+}
+
+.portfolio_img {
+    object-fit: cover !important;
+    height: 310px !important;
+    width: 310px !important;
+    object-fit: cover !important;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 8px var(--main-color);
+    animation: floatImage 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+.topcircle {
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color);
+    animation: floatImage 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+.bottomcircle {
+    bottom: 0px;
+    left: 50px;
+    width: 150px;
+    height: 150px;
+    background-color: var(--main-color);
+    animation: floatImage 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-1.5rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.title_intro {
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 0 !important;
+}
+
+.main_name {
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 1 !important;
+}
+
+.title_intro span {
+    color: var(--main-color);
+}
+
+
+.title_btn,
+.title_btn_1 {
+    font-size: 15px !important;
+}
+
+.title_btn {
+    padding: 8px 30px !important;
+    background-color: transparent !important;
+    border: 1px solid var(--main-color) !important;
+    color: var(--main-color) !important;
+    font-weight: 500 !important;
+    transition: .3s !important;
+}
+
+.title_btn:hover {
+    background-color: var(--main-color) !important;
+    color: #ffffff !important;
+}
+
+.title_btn_1 {
+    background-color: transparent !important;
+    border: 1px solid var(--main-color) !important;
+    color: var(--main-color) !important;
+    font-weight: 500 !important;
+    transition: .3s !important;
+}
+
+.title_btn_1:hover {
+    background-color: var(--main-color) !important;
+    color: #ffffff !important;
+
+}
+
+
+/* --------------------Social Media Icon ------------------ */
+.socialmedia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social_icon {
+    text-decoration: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 14px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 10px 15px -3px,
+        rgba(255, 255, 255, 0.05) 0px 4px 6px -2px;
+}
+
+.social_icon>i {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    transition: all 0.2s;
+}
+
+.social_icon:hover>i {
+    scale: 1.2;
+    color: #f1f1f1;
+}
+
+.social_icon:before {
+    background: var(--color);
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(45deg);
+}
+
+.social_icon:hover:before {
+    animation: slide 0.7s forwards;
+}
+
+@keyframes slide {
+    50% {
+        left: 10%;
+        top: -40%;
+    }
+
+    100% {
+        left: -15%;
+        top: -15%;
+    }
+}
+
+.social_icon:has(.fa-instagram) {
+    --color: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+}
+
+.social_icon:has(.fa-linkedin-in) {
+    --color: #0077b5;
+}
+
+.social_icon:has(.fa-whatsapp) {
+    --color: #25d366;
+}
+
+.social_icon:has(.fa-facebook) {
+    --color: #1877F2;
+}
+
+.social_icon:has(.fa-github) {
+    --color: #333;
+}
+
+
+/* -------------------- About section ------------------------------- */
+
+.about_title {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.about_title>span {
+    color: var(--main-color);
+    font-weight: bold;
+
+}
+
+.about-img {
+    width: 280px;
+    height: 280px;
+    border: 12px solid var(--second-bg-color);
+    box-shadow: 0 0 0 12px var(--main-color);
+    transition: .5s;
+}
+
+.about-img:hover {
+    border: 12px solid var(--second-bg-color);
+    box-shadow: 0 0 50px 12px var(--main-color);
+    transition: .5s;
+}
+
+/* .animationup{
+    opacity: 0;
+    transform: translateY(40px);
+    animation: movingup 0.5s linear forwards;
+}
+@keyframes movingup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    } 
+}*/
+
+/* -------------------- Project section ------------------------------- */
+
+.row {
+    display: flex !important;
+    justify-content: center !important;
+
+}
+
+.card {
+    color: var(--text-color) !important;
+    background-color: var(--second-bg-color) !important;
+    box-shadow: 0 0 20px 0px #000000;
+    border-radius: 30px 0px 30px 0px !important;
+}
+
+.card>a>img {
+    border-radius: 30px 0px 0px 0px !important;
+    cursor: pointer;
+}
+
+
+/* -------------------- Contact section ------------------ */
+
+#contact_page {
+    background-color: var(--second-bg-color);
+}
+
+.input_box>input,
+textarea {
+    background-color: transparent !important;
+    border: 2px solid var(--main-color) !important;
+    color: var(--text-color) !important;
+}
+
+::placeholder {
+    color: var(--main-color) !important;
+    opacity: 1 !important;
+}
+
+.contact_btn {
+    font-weight: 600 !important;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color) !important;
+    color: #fff;
+    transition: .3s !important;
+}
+
+.contact_btn:hover {
+    background-color: transparent !important;
+    border: 1px solid var(--main-color) !important;
+    color: var(--main-color) !important;
+}
+
+/* ----------------------Media Quary max-width 786 ---------------------*/
+
+@media (max-width:786px) {
+
+    /* -------------------- Header section ------------------------------- */
+    .logo {
+        font-size: 2rem;
+    }
+
+    .title_intro {
+        font-size: 25px;
+    }
+
+    .main_name {
+        font-size: 45px;
+    }
+
+    .portfolio_img {
+        height: 200px !important;
+        width: 200px !important;
+        object-fit: cover !important;
+    }
+
+    .topcircle {
+        top: 10px;
+    }
+
+    .bottomcircle {
+        left: 30px;
+        width: 130px;
+        height: 130px;
+    }
+
+    .title_btn {
+        padding: 8px 25px !important;
+    }
+
+    /* -------------------- About section ------------------------------- */
+
+    .about_title {
+        font-size: 30px;
+    }
+
+    .about-img {
+        width: 230px !important;
+        height: 230px !important;
+        border: 10px solid var(--second-bg-color);
+        box-shadow: 0 0 0 10px var(--main-color);
+    }
+
+    /* -------------------Project section------------------- */
+
+    .col-md-4 {
+        width: 21rem !important;
+    }
+
+}
+
+/* ----------------------Media Quary max-width 425px ---------------------*/
+
+@media (max-width:425px) {
+
+    /* -------------------- Main section ------------------------------- */
+    .topcircle {
+        top: 10px;
+        right: 80px;
+    }
+
+    .bottomcircle {
+        left: 70px;
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .title_main {
+        align-items: center !important;
+    }
+
+    .title_intro {
+        font-size: 20px;
+    }
+
+    .main_name {
+        font-size: 40px;
+    }
+
+    .main_info {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .title_about {
+        text-align: center;
+    }
+
+    /* -------------------- About section ------------------------------- */
+    .about_title {
+        font-size: 25px;
+    }
+
+    .about_info {
+        font-size: 15px;
+    }
+
+    /* -------------------- Project section ------------------------------- */
+    .project_title {
+        font-size: 20px;
+    }
+
+    /* -------------------- Contact section ------------------------------- */
+    .contact_main {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+/* ----------------------Media Quary max-width 320px ---------------------*/
+
+@media (max-width:320px) {
+
+    /* -------------------- Main section ------------------------------- */
+    .topcircle {
+        top: -5px;
+        right: 50px;
+    }
+
+    .bottomcircle {
+        left: 50px;
+    }
+
+    .title_intro {
+        font-size: 18px;
+    }
+
+    .main_name {
+        font-size: 30px;
+    }
+
+    .main_info {
+        font-size: 13px;
+    }
+
+    .socialmedia {
+        gap: .5rem;
+    }
+
+    /* -------------------- About section ------------------------------- */
+    .about_title {
+        font-size: 20px;
+    }
+
+    .about_info {
+        font-size: 13px;
+    }
+
+    /* -------------------- Project section ------------------------------- */
+    .project_title {
+        font-size: 18px;
+    }
+
+    /* -------------------- Contact section ------------------------------- */
+    .contact_main {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}
