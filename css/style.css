@@ -42,13 +42,9 @@ header {
     transition: 0.3s ease;
 }
 
-.logo span {
+.main_color_span{
     color: var(--main-color);
-
-}
-
-.logo:hover {
-    transform: scale(1.1);
+    font-weight: bold;
 }
 
 .nav-link {
@@ -134,12 +130,6 @@ header {
     font-weight: 600;
     line-height: 1 !important;
 }
-
-.title_intro span {
-    color: var(--main-color);
-}
-
-
 .title_btn,
 .title_btn_1 {
     font-size: 15px !important;
@@ -172,7 +162,6 @@ header {
     color: #ffffff !important;
 
 }
-
 
 /* --------------------Social Media Icon ------------------ */
 .socialmedia {
@@ -255,20 +244,11 @@ header {
     --color: #333;
 }
 
-
 /* -------------------- About section ------------------------------- */
-
 .about_title {
     font-size: 35px;
     font-weight: 600;
 }
-
-.about_title>span {
-    color: var(--main-color);
-    font-weight: bold;
-
-}
-
 .about-img {
     width: 280px;
     height: 280px;
@@ -283,26 +263,19 @@ header {
     transition: .5s;
 }
 
-/* .animationup{
-    opacity: 0;
-    transform: translateY(40px);
-    animation: movingup 0.5s linear forwards;
-}
-@keyframes movingup{
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    } 
-}*/
-
 /* -------------------- Project section ------------------------------- */
-
 .row {
     display: flex !important;
     justify-content: center !important;
 
 }
-
+.card_anchor{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.card-text{
+    margin-bottom: 5px !important;
+}
 .card {
     color: var(--text-color) !important;
     background-color: var(--second-bg-color) !important;
@@ -310,16 +283,21 @@ header {
     border-radius: 30px 0px 30px 0px !important;
 }
 
-.card>a>img {
+.card >img {
     border-radius: 30px 0px 0px 0px !important;
     cursor: pointer;
 }
 
-
 /* -------------------- Contact section ------------------ */
-
 #contact_page {
     background-color: var(--second-bg-color);
+}
+.contact_main{
+    background-color: var(--bg-color);
+    border-radius: 30px 0px 30px 0px !important;
+    box-shadow: 0 0 15px 0px #000000;
+    padding: 0px 30px 0px 30px !important;
+
 }
 
 .input_box>input,
@@ -330,7 +308,7 @@ textarea {
 }
 
 ::placeholder {
-    color: var(--main-color) !important;
+    color: var(--text-color) !important;
     opacity: 1 !important;
 }
 
@@ -349,7 +327,6 @@ textarea {
 }
 
 /* ----------------------Media Quary max-width 786 ---------------------*/
-
 @media (max-width:786px) {
 
     /* -------------------- Header section ------------------------------- */
@@ -386,7 +363,6 @@ textarea {
     }
 
     /* -------------------- About section ------------------------------- */
-
     .about_title {
         font-size: 30px;
     }
@@ -399,15 +375,14 @@ textarea {
     }
 
     /* -------------------Project section------------------- */
-
     .col-md-4 {
         width: 21rem !important;
     }
 
+   
 }
 
 /* ----------------------Media Quary max-width 425px ---------------------*/
-
 @media (max-width:425px) {
 
     /* -------------------- Main section ------------------------------- */
@@ -458,14 +433,12 @@ textarea {
     }
 
     /* -------------------- Contact section ------------------------------- */
-    .contact_main {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
+    .contact_main{
+        padding: 0px 5px 0px 5px !important;
     }
 }
 
 /* ----------------------Media Quary max-width 320px ---------------------*/
-
 @media (max-width:320px) {
 
     /* -------------------- Main section ------------------------------- */
@@ -509,8 +482,8 @@ textarea {
     }
 
     /* -------------------- Contact section ------------------------------- */
-    .contact_main {
-        padding-left: 0px !important;
-        padding-right: 0px !important;
+    .contact_main{
+        padding: 0px 0px 0px 0px !important;
     }
+
 }
