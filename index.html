@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anantharaj M</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="Source/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css"
+        integrity="sha512-lvaVbvmbHhG8cmfivxLRhemYlTT60Ly9Cc35USrpi8/m+Lf/f/T8x9kEIQq47cRj1VQIFuxTxxCcvqiQeQSHjQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -35,7 +38,7 @@
                             <a href="#about_page" class="nav-link me-4">About</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link me-4">Skills</a>
+                            <a href="#skills_page" class="nav-link me-4">Skills</a>
                         </li>
                         <li class="nav-item">
                             <a href="#project_page" class="nav-link me-4">Projects</a>
@@ -110,11 +113,10 @@
                 <div class="col-md-7 title_about d-flex flex-column justify-content-center ">
                     <h3 data-aos="fade-up" data-aos-duration="3000" class="about_title mb-3">Hi, I’m <span
                             class="main_color_span">Ananth.</span> Nice to meet you.</h3>
-                    <p data-aos="fade-up" data-aos-duration="2000" class="about_info">Lorem ipsum dolor, Lorem ipsum,
-                        dolor sit amet
-                        consectetur adipisicing elit. Ipsum quibusdam optio nostrum odit est nam sequi rerum nemo eos
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, ipsa. consectetur adipisicing
-                        elit. Voluptate, reiciendis</p>
+                    <p data-aos="fade-up" data-aos-duration="2000" class="about_info">A passionate and dedicated Front-End developer start my career in web development. 
+                        With a strong foundation in HTML, CSS, and JavaScript, I specialize in creating Visually Stunning, User-Friendly, and Responsive websites. </p>
+                        <p data-aos="fade-up" data-aos-duration="2000" class="about_info">As a fresher, I am looking for opportunities where i can contribute to exciting project, 
+                            learn from experienced developers and grow as a front-end developer</p>
 
                 </div>
                 <div data-aos="fade-up" data-aos-duration="3000"
@@ -132,14 +134,74 @@
 
     <div id="skills_page">
 
-        <div class="container">
-            <div class="row my-5">
+        <div class="container py-5">
+            <div class="row py-5">
+                <div class="col-md-6 skills_bars" data-aos="zoom-in" data-aos-duration="2500">
+                    <h3 data-aos="zoom-in-down" data-aos-duration="2500" class="Skils_title ps-2">My <span class="main_color_span">Skills </span></h3>
 
-                <div class="col-md-7">
-                    <h3 class="about_title"></h3>
-                    <p class="about_info"></p>
+                    <div class="skill" >
+                        <p>HTML</p>
+                        <div class="progress_line" style="
+                                --bg:#ac14da;
+                                --wd: 95%;
+                                --tx: '95%'">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>CSS</p>
+                        <div class="progress_line" style="
+                                --bg: #058805;
+                                --wd: 80%;
+                                --tx: '80%'">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p>JavaScript</p>
+                        <div class="progress_line" style="
+                                --bg:#e6740b;
+                                --wd: 50%;
+                                --tx: '50%'">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p>BootStrap</p>
+                        <div class="progress_line" style="
+                                --bg:#e01368;
+                                --wd: 75%;
+                                --tx: '75%'">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p>My SQL</p>
+                        <div class="progress_line" style="
+                                --bg:#0eb6e0;
+                                --wd: 70%;
+                                --tx: '70%'">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p>PHP</p>
+                        <div class="progress_line" style="
+                                --bg:#da2214;
+                                --wd: 40%;
+                                --tx: '40%'">
+                            <span></span>
+                        </div>
+                    </div>
+
+
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-6 skill_img d-flex align-item-center justify-content-center">
+                    <img class="img-fluid " src="images/Skill_img5.png" alt="Skill Img" width="480px" data-aos="zoom-in" data-aos-duration="2500">
 
                 </div>
             </div>
@@ -155,7 +217,8 @@
             <div class="row my-5">
                 <div class=" col-md-4 mb-4 " data-aos="zoom-in" data-aos-duration="2500">
                     <div class="card ">
-                        <img src="images/calculator-site.png" alt="Card Img" class="card-img-top img-fluid">
+                        <img src="images/calculator-site.png" alt="Card Img" class="card-img-top img-fluid mfp_popup"
+                            data-mfp-src="images/calculator-site.png">
                         <div class="card-body">
                             <a href="https://anantharajdeveloper.github.io/calculator-site/" class="card_anchor"
                                 target="_blank">
@@ -173,7 +236,8 @@
                 <div class="col-md-4 mb-4 d-flex justify-content-center align-item-center " data-aos="zoom-in"
                     data-aos-duration="2500">
                     <div class="card ">
-                        <img src="images/landing-site.png" alt="Card Img" class="card-img-top img-fluid">
+                        <img src="images/landing-site.png" alt="Card Img" class="card-img-top img-fluid  mfp_popup"
+                            data-mfp-src="images/landing-site.png">
                         <div class="card-body">
                             <a href="https://anantharajdeveloper.github.io/landing-page/" class="card_anchor"
                                 target="_blank">
@@ -191,7 +255,8 @@
                 <div class="col-md-4 mb-4 d-flex justify-content-center align-item-center " data-aos="zoom-in"
                     data-aos-duration="2500">
                     <div class="card ">
-                        <img src="images/agency-site.png" alt="Card Img" class="card-img-top img-fluid">
+                        <img src="images/agency-site.png" alt="Card Img" class="card-img-top img-fluid  mfp_popup"
+                            data-mfp-src="images/agency-site.png">
                         <div class="card-body">
                             <a href="https://anantharajdeveloper.github.io/agency-site/" class="card_anchor"
                                 target="_blank">
@@ -336,7 +401,37 @@
             AOS.init();
         </script>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"
+            integrity="sha512-fCRpXk4VumjVNtE0j+OyOqzPxF1eZwacU3kN3SsznRPWHgMTSSo7INc8aY03KQDBWztuMo5KjKzCFXI/a5rVYQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+        <script>
+            $('.mfp_popup').magnificPopup({
+                type: 'image',
+                image: {
+                    markup: '<div class="mfp-figure">' +
+                        '<div class="mfp-close"></div>' +
+                        '<div class="mfp-img"></div>' +
+                        '<div class="mfp-bottom-bar">' +
+                        '<div class="mfp-title"></div>' +
+                        '<div class="mfp-counter"></div>' +
+                        '</div>' +
+                        '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+                    cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+
+                    titleSrc: 'title', // Attribute of the target element that contains caption for the slide.
+                    // Or the function that should return the title. For example:
+                    // titleSrc: function(item) {
+                    //   return item.el.attr('title') + ' by Marsel Van Oosten';
+                    // }
+
+                    verticalFit: true, // Fits image in area vertically
+
+                    tError: 'The image could not be loaded.' // Error message
+                }
+            });
+        </script>
 </body>
 
 </html>
