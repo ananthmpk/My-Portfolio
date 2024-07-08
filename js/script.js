@@ -1,9 +1,13 @@
+//preloader -------------------------------------
+const loader = document.getElementById('preloader');
 
+window.onload = function () {
+    loader.classList.add('loaderpre');
+}
 
+//preloader -------------------------------------
 
-
-
-
+//Text loader --------------------------------------
 const typed = new Typed('.multiple_text',{
     strings: ['Web Developer','Frontend Developer', 'Wep Designer'],
     typeSpeed: 80,
@@ -12,3 +16,5 @@ const typed = new Typed('.multiple_text',{
     loop: true,
 
   });
+
+//Text loader --------------------------------------
