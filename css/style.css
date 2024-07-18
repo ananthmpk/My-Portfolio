@@ -26,16 +26,17 @@ body {
 
 }
 
-::-webkit-scrollbar{
-    width: 6px;   
+::-webkit-scrollbar {
+    width: 6px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: var(--main-color);
     border-radius: 2px;
 }
 
 /* ----------------preloader Section -------------------------------- */
-.preloader{
+.preloader {
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -44,12 +45,14 @@ body {
     background-color: var(--bg-color);
     z-index: 999 !important;
 }
-.loaderpre{
-    animation:preload 1 2s ease-in-out forwards;
+
+.loaderpre {
+    animation: preload 1 2s ease-in-out forwards;
     animation-delay: 2s;
 }
-@keyframes preload{
-    100%{
+
+@keyframes preload {
+    100% {
         opacity: 0;
         visibility: hidden;
     }
@@ -71,7 +74,7 @@ header {
     transition: 0.3s ease;
 }
 
-.main_color_span{
+.main_color_span {
     color: var(--main-color);
     font-weight: bold;
 }
@@ -96,8 +99,9 @@ header {
     color: var(--text-color);
     font-size: 25px;
 }
+
 .navbar-toggler:focus {
-    box-shadow:none !important;
+    box-shadow: none !important;
 }
 
 /* -------------------- Main section ------------------------------- */
@@ -162,6 +166,7 @@ header {
     font-weight: 600;
     line-height: 1 !important;
 }
+
 .title_btn,
 .title_btn_1 {
     font-size: 15px !important;
@@ -281,9 +286,11 @@ header {
     font-size: 35px;
     font-weight: 600;
 }
-.about_info{
+
+.about_info {
     line-height: 1.7 !important;
 }
+
 .about-img {
     width: 280px;
     height: 280px;
@@ -300,30 +307,40 @@ header {
 
 /* -------------------- Skills section ------------------------------- */
 
- #skills_page{
+#skills_page {
     background: var(--second-bg-color);
 }
-.skills_page{
+
+.skills_page {
     background-color: var(--bg-color);
     box-shadow: 0 0 10px 3px #000000;
     border-radius: 30px 0px 30px 0px !important;
 }
- .skills_bars .skill{
+
+.skills_bars {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+.skills_bars .skill {
     margin: 22px 10px;
- }
- .skill p{
+}
+
+.skill p {
     margin-bottom: 3px;
     color: #fff;
     font-size: 15px;
- }
- .skill .progress_line{
+}
+
+.skill .progress_line {
     position: relative;
     width: 100%;
     height: 5px;
-    background:rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
- }
- .skill .progress_line::before{
+}
+
+.skill .progress_line::before {
     position: absolute;
     content: "";
     height: 10px;
@@ -333,25 +350,26 @@ header {
     transform: translateY(-50%);
     background: var(--bg);
     border-radius: 8px;
-    box-shadow: 0 0 2px var(--bg),0 0 5px var(--bg);
+    box-shadow: 0 0 2px var(--bg), 0 0 5px var(--bg);
     z-index: 1;
     animation: circle-animate 2s forwards ease-out;
     opacity: 0;
- }
+}
 
- @keyframes circle-animate{
-    25%{
+@keyframes circle-animate {
+    25% {
         left: 0;
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 1;
-        left:calc( var(--wd) - 8px);
+        left: calc(var(--wd) - 8px);
     }
- }
+}
 
 
- .skill .progress_line span{
+.skill .progress_line span {
     position: relative;
     display: block;
     height: 100%;
@@ -360,18 +378,19 @@ header {
     border-radius: 8px;
     box-shadow: 0 0 2px var(--bg);
     animation: span-animate 2s forwards ease-out;
- }
- 
- @keyframes span-animate {
-    25%{
+}
+
+@keyframes span-animate {
+    25% {
         width: 0;
     }
-    100%{
+
+    100% {
         width: var(--wd);
     }
-  } 
-  
- .skill .progress_line span::before {
+}
+
+.skill .progress_line span::before {
     position: absolute;
     content: "";
     width: 0;
@@ -382,8 +401,9 @@ header {
     right: -6px;
     opacity: 0;
     animation: hint 0.2s forwards 2.2s;
- } 
- .skill .progress_line span::after{
+}
+
+.skill .progress_line span::after {
     position: absolute;
     content: var(--tx);
     color: #fff;
@@ -397,14 +417,14 @@ header {
     box-shadow: 0 0 2px var(--bg);
     opacity: 0;
     animation: hint 0.2s forwards 2.2s;
- }
+}
 
- @keyframes hint{
-    to{
+@keyframes hint {
+    to {
         transform: translateY(-5px);
         opacity: 1;
     }
- } 
+}
 
 
 
@@ -414,17 +434,21 @@ header {
     justify-content: center !important;
 
 }
-.card_anchor{
+
+.card_anchor {
     text-decoration: none;
     color: var(--text-color);
 }
-.card-text{
+
+.card-text {
     margin-bottom: 5px !important;
 }
+
 .note {
     font-size: 16px;
     color: rgb(177, 175, 175);
 }
+
 .card {
     color: var(--text-color) !important;
     background-color: var(--second-bg-color) !important;
@@ -432,7 +456,7 @@ header {
     border-radius: 30px 0px 30px 0px !important;
 }
 
-.card >img {
+.card>img {
     border-radius: 30px 0px 0px 0px !important;
     cursor: pointer;
 }
@@ -442,7 +466,7 @@ header {
     background-color: var(--second-bg-color);
 }
 
-.contact_main{
+.contact_main {
     background-color: var(--bg-color) !important;
     border-radius: 30px 0px 30px 0px !important;
     box-shadow: 0 0 15px 0px #000000;
@@ -450,7 +474,7 @@ header {
 }
 
 .form-control:focus {
-    box-shadow:none !important;
+    box-shadow: none !important;
 }
 
 .input_box>input,
@@ -528,26 +552,30 @@ textarea {
         box-shadow: 0 0 0 10px var(--main-color);
     }
 
-     /* -------------------Skills section------------------- */
-     .skills_bars{
-        width:40% !important;
-     }
-     .skill_img{
-        align-items:center ;
+    /* -------------------Skills section------------------- */
+    .skills_bars {
+        width: 40% !important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
 
-     }
-     .skill_img > img{
+    .skill_img {
+        align-items: center;
+
+    }
+
+    .skill_img>img {
         width: 300px !important;
         height: 270px !important;
-     }
+    }
 
     /* -------------------Project section------------------- */
     .col-md-4 {
         width: 21rem !important;
     }
 
-   
-   
+
+
 }
 
 /* ----------------------Media Quary max-width 425px ---------------------*/
@@ -595,16 +623,19 @@ textarea {
         font-size: 15px;
     }
 
-    
-     /* -------------------Skills section------------------- */
-     .skills_bars{
-        width:90% !important;
-     }
-     .skill_img > img{
+
+    /* -------------------Skills section------------------- */
+    .skills_bars {
+        width: 90% !important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .skill_img>img {
         margin-top: 50px;
         width: 350px !important;
         height: 320px !important;
-     }
+    }
 
     /* -------------------- Project section ------------------------------- */
     .project_title {
@@ -612,7 +643,7 @@ textarea {
     }
 
     /* -------------------- Contact section ------------------------------- */
-    .contact_main{
+    .contact_main {
         padding: 0px 5px 0px 5px !important;
     }
 }
@@ -657,10 +688,10 @@ textarea {
 
     /* -------------------Skills section------------------- */
 
-     .skill_img > img{
+    .skill_img>img {
         width: 350px !important;
         height: 300px !important;
-     }
+    }
 
     /* -------------------- Project section ------------------------------- */
     .project_title {
@@ -668,7 +699,7 @@ textarea {
     }
 
     /* -------------------- Contact section ------------------------------- */
-    .contact_main{
+    .contact_main {
         padding: 0px 0px 0px 0px !important;
     }
 
