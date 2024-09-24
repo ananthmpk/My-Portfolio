@@ -9,7 +9,7 @@ window.onload = function () {
 
 //Text loader --------------------------------------
 const typed = new Typed('.multiple_text',{
-    strings: ['Web Developer','Frontend Developer', 'Wep Designer'],
+    strings: ['Web Developer','Frontend Developer', 'Web Designer'],
     typeSpeed: 80,
     backSpeed:80,
     backDelay:1200,
