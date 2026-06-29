@@ -4,470 +4,1083 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Anantha Raj | Portfolio - Web & PHP Developer</title>
+    <meta name="description"
+        content="Personal Portfolio of Anantha Raj - Web Developer specializing in PHP, Laravel, HTML, CSS, Bootstrap, and Tailwind CSS.">
+    <meta name="keywords"
+        content="Anantha Raj, Portfolio, Web Developer, PHP Developer, Laravel Developer, HTML, CSS, Tailwind CSS">
     <!-- -----Favicon link --------- -->
     <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+
+    <!-- -----Tailwind CSS Play CDN ---------#f3b534 #252625 #d5d5d4   #f4aa0b -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#E8A020',
+                        brandDark: '#E8A020',
+                        charcoal: '#0F0F0F',
+                        charcoalSec: '#f5f4f2',
+                        grayMid: '#6D6A75',
+                        graySilver: '#37323E',
+                        white: '#ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+
     <!-- -----css link --------- -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- -----Bootstrap link --------- -->
-    <link rel="stylesheet" href="Source/css/bootstrap.min.css">
     <!-- -----Fontawesome link --------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- -----Magnific popup link --------- -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css"
-        integrity="sha512-lvaVbvmbHhG8cmfivxLRhemYlTT60Ly9Cc35USrpi8/m+Lf/f/T8x9kEIQq47cRj1VQIFuxTxxCcvqiQeQSHjQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- -----AOS link --------- -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- ------------------Preloader section ------------------- -->
-
-    <section id="preloader" class="preloader">
-        <img src="images/loader.gif" alt="Loder" width="230px">
-    </section>
+    <!-- <section id="preloader" class="preloader">
+        <img src="images/loader.gif" alt="Loader" width="230px">
+    </section> -->
 
     <!-- ------------------ Header section ------------------- -->
+    <header class="header sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between flex-wrap gap-x-4">
+            <!-- Logo (Left) -->
+            <a href="#" class="logo order-1">
+                Anantha<span class="main_color_span">Raj</span>
+            </a>
 
-    <header class="header position-sticky top-0">
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container">
-                <a data-aos="zoom-in" data-aos-duration="2100" data-aos-delay="2500" href="#" class="logo">Anantha<span
-                        class="main_color_span">Raj</span></a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation">
+            <!-- Right side: Hamburger + Contact button (mobile) -->
+            <div class="flex items-center gap-3 order-2 lg:order-3">
+                <!-- Contact button visible on desktop right end -->
+                <a href="#contact_page" class="nav-contact-btn hidden lg:inline-block">Hire Me</a>
+                <!-- Hamburger for mobile -->
+                <button id="navbar-toggler" type="button" class="block lg:hidden text-charcoal focus:outline-none">
                     <i class="fa-solid fa-bars-staggered"></i>
                 </button>
-                <div class="collapse navbar-collapse pe-3 justify-content-end " id="navbarMenu">
-                    <ul class="navbar-nav nav-underline ">
-                        <li class="nav-item">
-                            <a href="#top" class="nav-link me-4">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#about_page" class="nav-link me-4">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#skills_page" class="nav-link me-4">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#project_page" class="nav-link me-4">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contact_page" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
-                    
-                </div>
-                
+            </div>
+
+            <!-- Nav Menu (Center links only, no Contact button here) -->
+            <div class="hidden lg:flex items-center w-full lg:w-auto justify-end order-3 lg:order-2" id="navbarMenu">
+                <ul class="flex flex-col lg:flex-row list-none gap-y-2 lg:gap-y-0 mt-3 lg:mt-0 pl-0">
+                    <li class="nav-item">
+                        <a href="#top" class="nav-link lg:mr-8">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about_page" class="nav-link lg:mr-8">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills_page" class="nav-link lg:mr-8">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience_page" class="nav-link lg:mr-8">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project_page" class="nav-link">Projects</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
 
     <!-- ------------------ Main section ------------------- -->
-
     <div id="main_page">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center min-h-[calc(100vh-70px)]">
 
-        <div class="container ">
+                <div class="w-full md:w-7/12 title_main flex flex-col justify-center px-4 md:px-8">
+                    <h3 class="title_intro">Hello There! I'm</h3>
+                    <h1 class="main_name">AnanthaRaj</h1>
+                    <h3 class="title_intro mb-3">And I'm a <span class="multiple_text main_color_span"></span></h3>
+                    <p class="main_info">Web developer with a passion for creating visually stunning and user-friendly
+                        websites.</p>
 
-            <div class="row py-5 ">
-                <div data-aos="zoom-in-up" data-aos-duration="2100" data-aos-delay="2500"
-                    class="col-md-5 p-5 d-flex justify-content-center align-item-center position-relative">
-                    <span class="topcircle position-absolute rounded-pill"></span>
-                    <img src="images/portfolio-img.jfif" alt="Portfolio img"
-                        class="img-fluid rounded-pill portfolio_img z-3">
-                    <span class="bottomcircle position-absolute rounded-pill"></span>
+                    <div class="buttons mt-6 flex flex-wrap items-center gap-4">
+                        <a href="#project_page" class="portfolio-btn-wrap">
+                            <span class="portfolio-btn-main">View My Portfolio</span>
+                            <span class="portfolio-btn-icon">
+                                <i class="fa-solid fa-play"></i>
+                            </span>
+                        </a>
+                        <a href="tel:+917094930793" class="hire-btn-outline">
+                            Hire Me
+                        </a>
+                    </div>
+
+                    <div class="socialmedia my-8">
+                        <a href="https://www.instagram.com/anantharaj__mpk/" class="social_icon">
+                            <i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/anantharaj-mohanraj-473549269/" class="social_icon">
+                            <i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/+917094930793" class="social_icon">
+                            <i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="mailto:ananthmpk1999@gmail.com" class="social_icon">
+                            <i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://github.com/Ananthmpk/" class="social_icon">
+                            <i class="fa-brands fa-github"></i></a>
+                    </div>
                 </div>
 
-                <div class="col-md-7 title_main d-flex flex-column justify-content-center">
+                <!-- Hero Image Section with Blob + Badges -->
+                <div class="w-full md:w-5/12 flex justify-center items-center">
+                    <div class="hero-img-wrapper">
 
-                    <h3 class="title_intro">Hello, Myself</h1>
-                        <h1 class="main_name">Anantha Raj</h1>
-                        <h3 class="title_intro mb-3">And I'm a <span class="multiple_text main_color_span"></span></h1>
-                            <p class="main_info">Web developer with a passion for creating visually stunning and
-                                user-friendly
-                                websites.</p>
+                        <!-- Orange blob background -->
+                        <div class="hero-blob"></div>
 
+                        <!-- Profile image -->
+                        <img src="images/main.png" alt="Portfolio img" class="hero-photo">
 
-                            <div class="buttons ">
-                                <a href="tel:+917094930793" class="btn rounded-pill me-4 title_btn "> Hire Me <i
-                                        class="fa-regular fa-user ps-1"></i>
-                                </a>
-                                <a href="Source/Anantharaj CV.pdf" download="AnantharajCV"
-                                    class="btn rounded-pill px-4 py-2 title_btn_1">Resume <i
-                                        class="fa-regular fa-file-pdf ps-1"></i>
-                                </a>
-                            </div>
+                        <!-- Rotating HIRE ME badge -->
+                        <a href="tel:+917094930793" class="hire-me-badge" id="hire-me-badge">
+                            <svg viewBox="0 0 120 120" class="hire-me-svg" aria-label="Hire Me">
+                                <defs>
+                                    <path id="hire-circle" d="M 60,60 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                                </defs>
+                                <text class="hire-me-text">
+                                    <textPath href="#hire-circle" startOffset="0%">
+                                        ✦ HIRE ME ✦ HIRE ME ✦ HIRE ME
+                                    </textPath>
+                                </text>
+                            </svg>
+                            <!-- Center arrow icon -->
+                            <span class="hire-me-icon">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </span>
+                        </a>
 
-
-                            <div class="socialmedia my-5">
-                                <a href="https://www.instagram.com/anantharaj__mpk/" class="social_icon"
-                                    data-aos="zoom-in-up" data-aos-duration="1500">
-                                    <i class="fa-brands fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/anantharaj-mohanraj-473549269/" class="social_icon"
-                                    data-aos="zoom-in-up" data-aos-duration="1800">
-                                    <i class="fa-brands fa-linkedin-in"></i></a>
-                                <a href="https://wa.me/+917094930793" class="social_icon" data-aos="zoom-in-up"
-                                    data-aos-duration="2100">
-                                    <i class="fa-brands fa-whatsapp"></i></a>
-                                <a href="mailto:ananthmpk1999@gmail.com" class="social_icon" data-aos="zoom-in-up"
-                                    data-aos-duration="2300">
-                                    <i class="fa-solid fa-envelope  "></i></a>
-                                <a href="https://github.com/Ananthmpk/" class="social_icon" data-aos="zoom-in-up"
-                                    data-aos-duration="2500">
-                                    <i class="fa-brands fa-github"></i></a>
-                            </div>
+                        <!-- Floating role tags -->
+                        <div class="hero-tag hero-tag-php">
+                            <i class="fa-brands fa-php"></i>
+                            <span>PHP Developer</span>
+                        </div>
+                        <div class="hero-tag hero-tag-web">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Web Developer</span>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
 
+    <!-- ========== Skills Ticker Marquee — Below Hero ========== -->
+    <div class="skills-ticker-section">
+        <div class="ticker-bg-slant"></div>
+        <div class="skills-ticker-wrap">
+            <div class="ticker-track">
+                <div class="ticker-list">
+                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-php"></i> PHP</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-database"></i> MySQL</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-laravel"></i> Laravel</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-gears"></i> REST APIs</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-rotate"></i> AJAX</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-github"></i> Git &amp; GitHub</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-shield-halved"></i> Web Security</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-credit-card"></i> Payment Gateways</span>
+                </div>
+                <!-- duplicate for seamless loop -->
+                <div class="ticker-list" aria-hidden="true">
+                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-php"></i> PHP</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-database"></i> MySQL</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-laravel"></i> Laravel</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-gears"></i> REST APIs</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-rotate"></i> AJAX</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-github"></i> Git &amp; GitHub</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-shield-halved"></i> Web Security</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-credit-card"></i> Payment Gateways</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ------------------ About section ------------------- -->
-
     <div id="about_page">
-        <div class="container pt-1">
-            <div class="row my-5 py-5">
-                <div class="col-md-7 title_about d-flex flex-column justify-content-center ">
-                    <h3 data-aos="fade-up" data-aos-duration="3000" class="about_title mb-3">Hi, I’m <span
-                            class="main_color_span">Ananth.</span> Nice to meet you.</h3>
-                    <p data-aos="fade-up" data-aos-duration="2000" class="about_info">A passionate and dedicated
-                        Web developer start my career in web development.
-                        With a strong foundation in HTML, CSS, JavaScript,Bootstrap, MySQL and PHP, I specialize in creating Visually
-                        Stunning, User-Friendly, and Responsive websites. </p>
-                    <p data-aos="fade-up" data-aos-duration="2000" class="about_info">As a fresher, I am looking for
-                        opportunities where i can contribute to exciting project,
-                        learn from experienced developers and grow as a web developer</p>
-
+        <div class="container mx-auto px-4 pt-1">
+            <div class="flex flex-col-reverse md:flex-row my-12 py-12 items-center">
+                <div class="w-full md:w-5/12 py-8 flex justify-center items-center">
+                    <div class="about-frame-wrapper">
+                        <!-- Decorative background frame -->
+                        <!-- <div class="about-frame-bg"></div> -->
+                        <!-- Decorative dots pattern -->
+                        <div class="about-frame-dots"></div>
+                        <!-- Decorative floating accent -->
+                        <div class="about-frame-accent"></div>
+                        <div class="about-frame-accent-2"></div>
+                        <!-- The image that breaks out -->
+                        <img src="images/portfolio-img2.jpeg" alt="About img" class="about-frame-img">
+                    </div>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="3000"
-                    class="col-md-5 py-5 d-flex justify-content-center align-item-center">
-                    <img src="images/portfolio-img.jfif" alt="About img"
-                        class="img-fluid rounded-pill about-img animationup">
+                <div class="w-full md:w-7/12 title_about flex flex-col justify-center px-4 md:px-8">
+                    <h3 class="about_title mb-3">Hi, I’m <span class="main_color_span">Ananth.</span> Nice to meet you.
+                    </h3>
+                    <p class="about_info mb-4">I am a passionate PHP Developer with 2 years of experience in developing
+                        dynamic
+                        and responsive web applications. I have strong expertise in PHP, MySQL, HTML, CSS, JavaScript,
+                        Bootstrap,
+                        Tailwind CSS, and Laravel. </p>
+                    <p class="about_info mb-4">Throughout my career, I have worked on various projects including dynamic
+                        websites,
+                        admin dashboards, e-commerce platforms, CMS applications, REST APIs, and payment gateway
+                        integrations.
+                        I enjoy building user-friendly, scalable, and efficient web solutions that solve real-world
+                        problems.</p>
+                    <p class="about_info">I am continuously learning new technologies and improving my skills to become
+                        a better
+                        Full Stack Developer. I am always excited to take on new challenges and contribute to innovative
+                        projects.</p>
+
+                    <a href="Source/Anantharaj CV.pdf" download="AnantharajCV"
+                        class="portfolio-btn-wrap mt-6 self-center md:self-start">
+                        <span class="portfolio-btn-main">Download CV</span>
+                        <span class="portfolio-btn-icon">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------ Skills section ------------------- -->
+    <div id="skills_page" class="py-16">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- Header (Title style from second image) -->
+            <div class="mb-12 text-left">
+                <span class="text-brand text-xs font-semibold tracking-widest uppercase">TECHNICAL
+                    PROFILE</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-charcoal mt-1">Skills & Tools</h2>
+                <div class="w-12 h-1 bg-gradient-to-r from-brand to-brandDark mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Grid of Cards (Icon model from first image) -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- HTML -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-brands fa-html5 text-[#e34f26] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">HTML</span>
+                </div>
+
+                <!-- CSS -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-brands fa-css3-alt text-[#1572b6] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">CSS</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-brands fa-js text-[#f7df1e] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">JavaScript</span>
+                </div>
+
+                <!-- Bootstrap -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-brands fa-bootstrap text-[#7952b3] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">Bootstrap</span>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <svg class="w-12 h-12 mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.595 14.717 11.667 17.2 11.667c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C15.535 5.872 14.484 4.8 12.001 4.8zM6.001 11.667c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.228 2.259 4.712 2.259 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C9.535 12.739 8.484 11.667 6.001 11.667z"
+                            fill="#06b6d4" />
+                    </svg>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">Tailwind
+                        CSS</span>
+                </div>
+
+                <!-- jQuery -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-solid fa-code text-[#0769ad] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">jQuery</span>
+                </div>
+
+                <!-- PHP -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-brands fa-php text-[#777bb4] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">PHP</span>
+                </div>
+
+                <!-- MySQL -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-solid fa-database text-[#00758f] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">MySQL</span>
+                </div>
+
+                <!-- Laravel -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-brands fa-laravel text-[#ff2d20] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">Laravel</span>
+                </div>
+
+                <!-- Rest APIs -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-solid fa-gears text-[#00b4d8] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">Rest
+                        APIs</span>
+                </div>
+
+                <!-- MVC -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-solid fa-cubes text-[#38bdf8] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">MVC</span>
+                </div>
+
+                <!-- Ajax -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-solid fa-rotate text-[#4f46e5] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">Ajax</span>
+                </div>
+
+                <!-- Git & GitHub -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-brands fa-github text-charcoal text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">Git
+                        & GitHub</span>
+                </div>
+
+                <!-- Payment Gateways -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-solid fa-credit-card text-[#10b981] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">Payment
+                        Gateways</span>
+                </div>
+
+                <!-- Web Security -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-solid fa-shield-halved text-[#ef4444] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">Web
+                        Security</span>
+                </div>
+
+                <!-- cPanel -->
+                <div
+                    class="flex flex-col items-center justify-center p-3 bg-white border border-graySilver/20 rounded-xl shadow-lg hover:border-brand hover:scale-105 transition-all duration-300 aspect-square">
+                    <i class="fa-solid fa-server text-[#ff6c2c] text-6xl mb-4"></i>
+                    <span class="text-charcoal text-xs font-bold tracking-wider uppercase text-center">cPanel</span>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- ------------------ Experience section ------------------- -->
+    <div id="experience_page" class="py-16">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- Header (Title style from image) -->
+            <div class="mb-16 text-left">
+                <span class="text-brand text-xs font-semibold tracking-widest uppercase">CAREER
+                    TIMELINE</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-charcoal mt-1">Work Experience</h2>
+                <div class="w-12 h-1 bg-gradient-to-r from-brand to-brandDark mt-3 rounded-full"></div>
+            </div>
 
-
-    <!-- ------------------ Skills section ------------------- -->
-
-    <div id="skills_page" class="pt-5">
-
-        <div class="container py-5">
-            <div class="row py-4 skills_page mx-2">
-                <div class="col-md-6 skills_bars" data-aos="zoom-in" data-aos-duration="2000">
-                    <h3 data-aos="zoom-in-down" data-aos-duration="2000" class="Skils_title ps-2">My <span
-                            class="main_color_span">Skills </span></h3>
-
-                    <div class="skill">
-                        <p>HTML</p>
-                        <div class="progress_line" style="
-                                --bg:#ac14da;
-                                --wd: 95%;
-                                --tx: '95%'">
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <p>CSS</p>
-                        <div class="progress_line" style="
-                                --bg: #058805;
-                                --wd: 80%;
-                                --tx: '80%'">
-                            <span></span>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <p>JavaScript</p>
-                        <div class="progress_line" style="
-                                --bg:#e6740b;
-                                --wd: 50%;
-                                --tx: '50%'">
-                            <span></span>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <p>BootStrap</p>
-                        <div class="progress_line" style="
-                                --bg:#e01368;
-                                --wd: 75%;
-                                --tx: '75%'">
-                            <span></span>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <p>My SQL</p>
-                        <div class="progress_line" style="
-                                --bg:#0eb6e0;
-                                --wd: 70%;
-                                --tx: '70%'">
-                            <span></span>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <p>PHP</p>
-                        <div class="progress_line" style="
-                                --bg:#da2214;
-                                --wd: 60%;
-                                --tx: '60%'">
-                            <span></span>
-                        </div>
-                    </div>
-
-
+            <!-- Timeline wrapper -->
+            <div class="relative">
+                <!-- Vertical Dotted Line (Desktop only) -->
+                <div
+                    class="hidden md:block absolute left-[calc(30.57%-1px)] top-6 bottom-6 w-0 border-l-2 border-dashed border-graySilver/50">
                 </div>
-                <div class="col-md-6 skill_img d-flex align-item-center justify-content-center">
-                    <img class="img-fluid " src="images/Skill_img5.png" alt="Skill Img" width="380px" data-aos="zoom-in"
-                        data-aos-duration="2000">
+                <!-- Vertical Dotted Line (Mobile only) -->
+                <div
+                    class="block md:hidden absolute left-[15px] top-6 bottom-6 w-0 border-l-2 border-dashed border-graySilver/50">
+                </div>
 
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- Item 1: Fabhost Web Solution -->
+                    <div
+                        class="grid grid-cols-[auto_1fr] md:grid-cols-[2fr_auto_5fr] gap-4 md:gap-8 items-start relative">
+                        <!-- Left block (Desktop only) -->
+                        <div class="hidden md:block text-right pr-2">
+                            <h4 class="text-lg font-bold text-charcoal">Fabhost Web Solution</h4>
+                            <p class="text-xs text-brand mt-1 font-semibold">Feb 2025 - Present</p>
+                            <div class="text-xs text-grayMid mt-1 flex items-center justify-end gap-1">
+                                <i class="fa-solid fa-location-dot text-[10px]"></i>
+                                <span>Chennai, Tamil Nadu</span>
+                            </div>
+                        </div>
+
+                        <!-- Middle dot block -->
+                        <div class="flex items-center justify-center w-8">
+                            <div
+                                class="w-8 h-8 rounded-full border-2 border-dashed border-brand bg-white flex items-center justify-center z-10 shadow-lg">
+                                <div class="w-4 h-4 bg-brand rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <!-- Right block (Main Content on Desktop, Content + Meta on Mobile) -->
+                        <div class="pl-2">
+                            <!-- Mobile only metadata -->
+                            <div class="block md:hidden mb-2">
+                                <h4 class="text-lg font-bold text-charcoal">Fabhost Web Solution</h4>
+                                <div class="flex items-center gap-x-2 flex-wrap">
+                                    <span class="text-xs text-brand font-semibold">Feb 2025 - Present</span>
+                                    <span class="text-xs text-grayMid flex items-center gap-1">
+                                        <i class="fa-solid fa-location-dot text-[10px]"></i>
+                                        <span>Chennai, Tamil Nadu</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-bold text-charcoal md:mt-0">PHP Developer</h3>
+                            <ul class="list-disc list-inside text-grayMid mt-3 space-y-2 text-sm pl-2">
+                                <li>Building scalable eCommerce platforms and data-driven web applications.</li>
+                                <li>Managing product catalogs, tracking systems, and analytics-based performance reports
+                                    to improve user experience.</li>
+                                <li>Developing and maintaining RESTful APIs, database structures, and backend modules
+                                    for high-performance apps.</li>
+                                <li>Debugging, optimising application performance, and collaborating with
+                                    cross-functional teams.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Brandbee Technologies -->
+                    <div
+                        class="grid grid-cols-[auto_1fr] md:grid-cols-[2fr_auto_5fr] gap-4 md:gap-8 items-start relative">
+                        <!-- Left block (Desktop only) -->
+                        <div class="hidden md:block text-right pr-2">
+                            <h4 class="text-lg font-bold text-charcoal">Brandbee Technologies</h4>
+                            <p class="text-xs text-brand mt-1 font-semibold">Jan 2024 - Jun 2024</p>
+                            <div class="text-xs text-grayMid mt-1 flex items-center justify-end gap-1">
+                                <i class="fa-solid fa-location-dot text-[10px]"></i>
+                                <span>Karaikudi, Tamil Nadu</span>
+                            </div>
+                        </div>
+
+                        <!-- Middle dot block -->
+                        <div class="flex items-center justify-center w-8">
+                            <div
+                                class="w-8 h-8 rounded-full border-2 border-dashed border-brand bg-white flex items-center justify-center z-10 shadow-lg">
+                                <div class="w-4 h-4 bg-brand rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <!-- Right block -->
+                        <div class="pl-2">
+                            <!-- Mobile only metadata -->
+                            <div class="block md:hidden mb-2">
+                                <h4 class="text-lg font-bold text-charcoal">Brandbee Technologies</h4>
+                                <div class="flex items-center gap-x-2 flex-wrap">
+                                    <span class="text-xs text-brand font-semibold">Jan 2024 - Jun 2024</span>
+                                    <span class="text-xs text-grayMid flex items-center gap-1">
+                                        <i class="fa-solid fa-location-dot text-[10px]"></i>
+                                        <span>Karaikudi, Tamil Nadu</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-bold text-charcoal md:mt-0">Full Stack Developer Intern</h3>
+                            <ul class="list-disc list-inside text-grayMid mt-3 space-y-2 text-sm pl-2">
+                                <li>Developed e-commerce applications using Core PHP, working on product listings and
+                                    backend functionalities.</li>
+                                <li>Implemented responsive UI and collaborated with the team to enhance usability and
+                                    application performance.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- ------------------ Projects section ------------------- -->
-    <div id="project_page">
-        <div class="container py-5">
-            <h2 class=" project_title pt-5" data-aos="zoom-in" data-aos-duration="2000"> SOME OF MY <span
-                    class="main_color_span"> LATEST WORK</span> </h2>
-            <p class="note" data-aos="zoom-in" data-aos-duration="2000">Note: clicking on an image expands it to
-                fullscreen, and clicking on the project name takes you to the actual website</p>
-            <div class="row my-5">
-                <div class=" col-md-4 mb-4 d-flex justify-content-center align-item-center" data-aos="zoom-in"
-                    data-aos-duration="2500">
-                    <div class="card ">
-                        <img src="images/pizza-site.png" alt="Card Img" class="card-img-top img-fluid mfp_popup"
-                            data-mfp-src="images/pizza-site.png">
-                        <div class="card-body">
-                            <a href="https://ananthmpk.github.io/Pizza_Order_side/" class="card_anchor" target="_blank">
-                                <p class="card-text">Responsive Pizza order website perfect card design and it's my
-                                    first responsive site </p>
-                            </a>
-                            <div class="badges mb-3">
-                                <span class="badge bg-danger py-2 px-3 ">HTML</span>
-                                <span class="badge bg-primary py-2 px-3 ms-1">CSS</span>
-                                <span class="badge bg-warning py-2 px-3 ms-1">JavaScript</span>
+    <div id="project_page" class="py-16">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- Section Header with Arrows on Top Right -->
+            <div class="flex items-end justify-between mb-8">
+                <div class="text-left">
+                    <span class="text-brand text-xs font-semibold tracking-widest uppercase">WHAT I'VE BUILT</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-charcoal mt-1">Projects</h2>
+                    <div class="w-12 h-1 bg-gradient-to-r from-brand to-brandDark mt-3 rounded-full"></div>
+                </div>
+                <!-- Carousel Control Buttons at Top Right End -->
+                <div class="flex items-center gap-3">
+                    <button id="project-prev" class="carousel-btn" aria-label="Previous Slide">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="project-next" class="carousel-btn" aria-label="Next Slide">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carousel track wrapper -->
+            <div class="project-carousel-wrapper">
+                <div class="project-carousel-track" id="project-track">
+                    <!-- Project 1 -->
+                    <div class="project-carousel-card">
+                        <div class="project-card">
+                            <div class="project-img-container">
+                                <img src="images/pizza-site.png" alt="Pizza Order Website" class="project-img">
+                                <div class="project-overlay">
+                                    <a href="https://ananthmpk.github.io/Pizza_Order_side/" target="_blank"
+                                        class="project-visit-btn">
+                                        Visit Site <i class="fa-solid fa-arrow-up-right-from-square pl-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-body p-6 flex flex-col flex-grow">
+                                <h3 class="project-title-text">
+                                    <a href="https://ananthmpk.github.io/Pizza_Order_side/" target="_blank">Pizza Order
+                                        Website</a>
+                                </h3>
+                                <p class="project-desc-text mb-4">Responsive Pizza order website. Features custom card
+                                    layouts. My first responsive web project.</p>
+                                <div class="project-tech-badges mt-auto flex flex-wrap gap-2">
+                                    <span class="badge badge-html">HTML</span>
+                                    <span class="badge badge-css">CSS</span>
+                                    <span class="badge badge-js">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-carousel-card">
+                        <div class="project-card">
+                            <div class="project-img-container">
+                                <img src="images/landing-site.png" alt="Bootstrap Landing Page" class="project-img">
+                                <div class="project-overlay">
+                                    <a href="https://ananthmpk.github.io/landing-page/" target="_blank"
+                                        class="project-visit-btn">
+                                        Visit Site <i class="fa-solid fa-arrow-up-right-from-square pl-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-body p-6 flex flex-col flex-grow">
+                                <h3 class="project-title-text">
+                                    <a href="https://ananthmpk.github.io/landing-page/" target="_blank">Bootstrap
+                                        Landing Page</a>
+                                </h3>
+                                <p class="project-desc-text mb-4">Single page modern landing website built with
+                                    Bootstrap and Tailwind styling.</p>
+                                <div class="project-tech-badges mt-auto flex flex-wrap gap-2">
+                                    <span class="badge badge-html">HTML</span>
+                                    <span class="badge badge-css">CSS</span>
+                                    <span class="badge badge-tailwind">Tailwind CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-carousel-card">
+                        <div class="project-card">
+                            <div class="project-img-container">
+                                <img src="images/pet-shop.png" alt="Pet Shop Cards Design" class="project-img">
+                                <div class="project-overlay">
+                                    <a href="https://ananthmpk.github.io/ModernCard-Design/" target="_blank"
+                                        class="project-visit-btn">
+                                        Visit Site <i class="fa-solid fa-arrow-up-right-from-square pl-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-body p-6 flex flex-col flex-grow">
+                                <h3 class="project-title-text">
+                                    <a href="https://ananthmpk.github.io/ModernCard-Design/" target="_blank">Pet Shop
+                                        Cards Design</a>
+                                </h3>
+                                <p class="project-desc-text mb-4">Responsive modern card design showcasing a birds and
+                                    pet shop catalog.</p>
+                                <div class="project-tech-badges mt-auto flex flex-wrap gap-2">
+                                    <span class="badge badge-html">HTML</span>
+                                    <span class="badge badge-css">CSS</span>
+                                    <span class="badge badge-tailwind">Tailwind CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-carousel-card">
+                        <div class="project-card">
+                            <div class="project-img-container">
+                                <img src="images/flower-shop.png" alt="Flower Shop E-Commerce" class="project-img">
+                                <div class="project-overlay">
+                                    <a href="https://ananthmpk.github.io/Flower-shop/" target="_blank"
+                                        class="project-visit-btn">
+                                        Visit Site <i class="fa-solid fa-arrow-up-right-from-square pl-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-body p-6 flex flex-col flex-grow">
+                                <h3 class="project-title-text">
+                                    <a href="https://ananthmpk.github.io/Flower-shop/" target="_blank">Flower Shop
+                                        E-Commerce</a>
+                                </h3>
+                                <p class="project-desc-text mb-4">Responsive Flower Shop e-commerce website with a
+                                    customized card structure.</p>
+                                <div class="project-tech-badges mt-auto flex flex-wrap gap-2">
+                                    <span class="badge badge-html">HTML</span>
+                                    <span class="badge badge-css">CSS</span>
+                                    <span class="badge badge-tailwind">Tailwind CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-carousel-card">
+                        <div class="project-card">
+                            <div class="project-img-container">
+                                <img src="images/dasboard-flower bot.png" alt="Admin Dashboard Panel"
+                                    class="project-img">
+                                <div class="project-overlay">
+                                    <a href="https://ananthmpk.github.io/Admin-Dashboard/" target="_blank"
+                                        class="project-visit-btn">
+                                        Visit Site <i class="fa-solid fa-arrow-up-right-from-square pl-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-body p-6 flex flex-col flex-grow">
+                                <h3 class="project-title-text">
+                                    <a href="https://ananthmpk.github.io/Admin-Dashboard/" target="_blank">Admin
+                                        Dashboard Panel</a>
+                                </h3>
+                                <p class="project-desc-text mb-4">E-commerce admin dashboard layout. Highly responsive
+                                    interface designed for backend integrations.</p>
+                                <div class="project-tech-badges mt-auto flex flex-wrap gap-2">
+                                    <span class="badge badge-html">HTML</span>
+                                    <span class="badge badge-css">CSS</span>
+                                    <span class="badge badge-tailwind">Tailwind CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-carousel-card">
+                        <div class="project-card">
+                            <div class="project-img-container">
+                                <img src="images/calculator-site.png" alt="Interactive Calculator" class="project-img">
+                                <div class="project-overlay">
+                                    <a href="https://ananthmpk.github.io/calculator-site/" target="_blank"
+                                        class="project-visit-btn">
+                                        Visit Site <i class="fa-solid fa-arrow-up-right-from-square pl-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-body p-6 flex flex-col flex-grow">
+                                <h3 class="project-title-text">
+                                    <a href="https://ananthmpk.github.io/calculator-site/" target="_blank">Interactive
+                                        Calculator</a>
+                                </h3>
+                                <p class="project-desc-text mb-4">Calculator utility with an interactive sidebar
+                                    toggler. Optimized for desktop use.</p>
+                                <div class="project-tech-badges mt-auto flex flex-wrap gap-2">
+                                    <span class="badge badge-html">HTML</span>
+                                    <span class="badge badge-css">CSS</span>
+                                    <span class="badge badge-js">JavaScript</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4 mb-4 d-flex justify-content-center align-item-center " data-aos="zoom-in"
-                    data-aos-duration="2500">
-                    <div class="card ">
-                        <img src="images/landing-site.png" alt="Card Img" class="card-img-top img-fluid  mfp_popup"
-                            data-mfp-src="images/landing-site.png">
-                        <div class="card-body">
-                            <a href="https://ananthmpk.github.io/landing-page/" class="card_anchor" target="_blank">
-                                <p class="card-text">Single page landing site fully using bootstrap </p>
-                            </a>
-                            <div class="badges mb-3">
-                                <span class="badge bg-danger py-2 px-3">HTML</span>
-                                <span class="badge bg-primary py-2 px-3 ms-1">CSS</span>
-                                <span class="badge bg-success py-2 px-3 ms-1">BootStrap</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4 d-flex justify-content-center align-item-center " data-aos="zoom-in"
-                    data-aos-duration="2500">
-                    <div class="card ">
-                        <img src="images/pet-shop.png" alt="Card Img" class="card-img-top img-fluid  mfp_popup"
-                            data-mfp-src="images/pet-shop.png">
-                        <div class="card-body">
-                            <a href="https://ananthmpk.github.io/ModernCard-Design/" class="card_anchor"
-                                target="_blank">
-                                <p class="card-text">Responsible modern card design in Birds pet shop </p>
-                            </a>
-                            <div class="badges mb-3">
-                                <span class="badge bg-danger py-2 px-3">HTML</span>
-                                <span class="badge bg-primary py-2 px-3 ms-1">CSS</span>
-                                <span class="badge bg-success py-2 px-3 ms-1">BootStrap</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4 d-flex justify-content-center align-item-center " data-aos="zoom-in"
-                    data-aos-duration="2500">
-                    <div class="card ">
-                        <img src="images/flower-shop.png" alt="Card Img" class="card-img-top img-fluid mfp_popup"
-                            data-mfp-src="images/flower-shop.png">
-                        <div class="card-body">
-                            <a href="https://ananthmpk.github.io/Flower-shop/" class="card_anchor" target="_blank">
-                                <p class="card-text">E-Commerce Responsive Flower Shop website and Creating new model
-                                    card design</p>
-                            </a>
-                            <div class="badges mb-3">
-                                <span class="badge bg-danger py-2 px-3">HTML</span>
-                                <span class="badge bg-primary py-2 px-3 ms-1">CSS</span>
-                                <span class="badge bg-success py-2 px-3 ms-1">BootStrap</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4 d-flex justify-content-center align-item-center " data-aos="zoom-in"
-                    data-aos-duration="2500">
-                    <div class="card ">
-                        <img src="images/dasboard-flower bot.png " alt="Card Img"
-                            class="card-img-top img-fluid  mfp_popup" data-mfp-src="images/dasboard-flower bot.png">
-                        <div class="card-body">
-                            <a href="https://ananthmpk.github.io/Admin-Dashboard/" class="card_anchor" target="_blank">
-                                <p class="card-text">E-Commerce Admin Dashboard with Responsive, future update backend
-                                    using PHP(now working)</p>
-                            </a>
-                            <div class="badges mb-3">
-                                <span class="badge bg-danger py-2 px-3">HTML</span>
-                                <span class="badge bg-primary py-2 px-3 ms-1">CSS</span>
-                                <span class="badge bg-success py-2 px-3 ms-1">BootStrap</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class=" col-md-4 mb-4 d-flex justify-content-center align-item-center" data-aos="zoom-in"
-                    data-aos-duration="2500">
-                    <div class="card ">
-                        <img src="images/calculator-site.png" alt="Card Img" class="card-img-top img-fluid mfp_popup"
-                            data-mfp-src="images/calculator-site.png">
-                        <div class="card-body">
-                            <a href="https://ananthmpk.github.io/calculator-site/" class="card_anchor" target="_blank">
-                                <p class="card-text">Calculator and Sideabar using click event...pls check in pc</p>
-                            </a>
-                            <div class="badges mb-3">
-                                <span class="badge bg-danger py-2 px-3 ">HTML</span>
-                                <span class="badge bg-primary py-2 px-3 ms-1">CSS</span>
-                                <span class="badge bg-warning py-2 px-3 ms-1">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
+    </div>
 
+    <!-- ------------------ Education section ------------------- -->
+    <div id="education_page" class="py-16">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- Header (Title style from second image) -->
+            <div class="mb-12 text-left">
+                <span class="text-brand text-xs font-semibold tracking-widest uppercase">ACADEMIC
+                    BACKGROUND</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-charcoal mt-1">Education</h2>
+                <div class="w-12 h-1 bg-gradient-to-r from-brand to-brandDark mt-3 rounded-full"></div>
+            </div>
 
-        <!-- ------------------ Contact section ------------------- -->
-
-        <div id="contact_page" class="pt-5">
-            <div class="container py-5 ">
-                <div class="row contact_main mx-2">
-                    <div class="col-md-6 my-5 d-flex justify-content-center align-item-center">
-                        <img src="images/envelop.png" alt="Envelop" class="img-fluid" width="500px"  data-aos="zoom-in"
-                        data-aos-duration="2500">
+            <!-- Grid of Education Cards (Premium Style) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Full Stack Development Card -->
+                <div
+                    class="flex items-center gap-5 p-6 bg-white border border-graySilver/20 rounded-2xl shadow-lg hover:border-brand hover:scale-[1.02] transition-all duration-300">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-brand to-brandDark flex items-center justify-center shadow-md">
+                        <i class="fa-solid fa-laptop-code text-white text-xl"></i>
                     </div>
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-charcoal leading-tight">Full
+                            Stack
+                            Development</h3>
+                        <p class="text-sm text-grayMid mt-1 font-semibold">Brandbee Technologies,
+                            Karaikudi</p>
+                        <p class="text-xs text-grayMid mt-2 flex items-center gap-1.5">
+                            <i class="fa-regular fa-calendar-days text-[10px]"></i>
+                            <span>Jun 2023 - Dec 2023</span>
+                        </p>
+                    </div>
+                </div>
 
-                    <div class="col-md-6 ">
-                        <form class="mx-2 pt-3 pb-1">
-
-                            <h2 data-aos="zoom-in-left" data-aos-duration="2500" class="contact_title p-2">Let's<span class="main_color_span"> talk</span></h2>
-                            <div class=" input_box" data-aos="zoom-in-right" data-aos-duration="3000">
-                                <input class="form-control rounded-3 py-1 px-2 mb-3" type="text" placeholder="Full Name"
-                                    required>
-                            </div>
-                            <div class=" input_box" data-aos="zoom-in-left" data-aos-duration="3000">
-                                <input class="form-control rounded-3 py-1 px-2 mb-3" type="email"
-                                    placeholder="Email Address" required>
-                            </div>
-
-                            <div class=" input_box" data-aos="zoom-in-right" data-aos-duration="3000">
-                                <input class="form-control rounded-3 py-1 px-2 mb-3" type="tel"
-                                    placeholder="Phone Number" required>
-                            </div>
-
-                            <div class=" input_box" data-aos="zoom-in-left" data-aos-duration="2500">
-                                <textarea name="" id="" class="w-100 form-control rounded-3 py-1 px-2" rows="4"
-                                    cols="30" placeholder="Your Message" required></textarea>
-                            </div>
-                            <div class="text-center mt-3 pb-3">
-                                <input class="contact_btn  rounded-pill py-2 px-5" type="submit" value="Submit">
-                            </div>
-                        </form>
+                <!-- Bachelor of Computer Science Card -->
+                <div
+                    class="flex items-center gap-5 p-6 bg-white border border-graySilver/20 rounded-2xl shadow-lg hover:border-brand hover:scale-[1.02] transition-all duration-300">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-brand to-brandDark flex items-center justify-center shadow-md">
+                        <i class="fa-solid fa-graduation-cap text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-charcoal leading-tight">
+                            Bachelor
+                            of Computer Science
+                        </h3>
+                        <p class="text-sm text-grayMid mt-1 font-semibold">HH The Rajah's College,
+                            Pudukkottai</p>
+                        <p class="text-xs text-grayMid mt-2 flex items-center gap-1.5">
+                            <i class="fa-regular fa-calendar-days text-[10px]"></i>
+                            <span>2017 - 2020</span>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- ------------------ Contact section ------------------- -->
+    <div id="contact_page" class="py-12">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="flex flex-col md:flex-row contact_main mx-2 items-center">
+                <div class="w-full md:w-1/2 my-8 flex flex-col justify-center px-4 md:px-8">
+                    <!-- Subtitle style with prefix-dash -->
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-8 h-[2px] bg-brand rounded-full"></span>
+                        <span class="text-brand text-xs font-semibold tracking-widest uppercase">GET
+                            IN TOUCH</span>
+                    </div>
+                    <!-- Title -->
+                    <h2 class="text-3xl md:text-4xl font-bold text-charcoal mb-4">Let's Work <span
+                            class="main_color_span">Together</span></h2>
+                    <!-- Description -->
+                    <p class="text-grayMid text-sm mb-8 leading-relaxed max-w-md">
+                        Have a project in mind? I'd love to hear about it. Drop me a message and let's create something
+                        remarkable.
+                    </p>
 
-        <!-- ------------------ Footer section ------------------- -->
+                    <!-- Contact Info Items -->
+                    <div class="space-y-6">
+                        <!-- Email Item -->
+                        <div class="flex items-center gap-4 group">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-white border border-graySilver/20 rounded-xl flex items-center justify-center group-hover:border-brand group-hover:scale-105 transition-all duration-300 shadow-md">
+                                <i
+                                    class="fa-solid fa-envelope text-charcoal text-base group-hover:text-brand transition-colors"></i>
+                            </div>
+                            <div>
+                                <span
+                                    class="block text-[10px] font-bold text-brand tracking-wider uppercase">EMAIL</span>
+                                <a href="mailto:ananthmpk1999@gmail.com"
+                                    class="text-sm text-charcoal hover:text-brand transition-colors">ananthmpk1999@gmail.com</a>
+                            </div>
+                        </div>
 
-        <footer id="footer_page">
+                        <!-- Phone Item -->
+                        <div class="flex items-center gap-4 group">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-white border border-graySilver/20 rounded-xl flex items-center justify-center group-hover:border-brand group-hover:scale-105 transition-all duration-300 shadow-md">
+                                <i
+                                    class="fa-solid fa-phone text-charcoal text-base group-hover:text-brand transition-colors"></i>
+                            </div>
+                            <div>
+                                <span
+                                    class="block text-[10px] font-bold text-brand tracking-wider uppercase">PHONE</span>
+                                <a href="tel:+917094930793"
+                                    class="text-sm text-charcoal hover:text-brand transition-colors">+91
+                                    7094930793</a>
+                            </div>
+                        </div>
 
-            <div class="container mt-5 mb-3 text-center">
-                <div class=" d-flex justify-content-center">
-                    <div class="socialmedia my-4">
-                        <a href="https://www.instagram.com/anantharaj__mpk/" class="social_icon" data-aos="zoom-in-up"
-                            data-aos-duration="1500"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/anantharaj-mohanraj-473549269/" class="social_icon"
-                            data-aos="zoom-in-up" data-aos-duration="1800"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://wa.me/+917094930793" class="social_icon" data-aos="zoom-in-up"
-                            data-aos-duration="2100"><i class="fa-brands fa-whatsapp"></i></i></a>
-                        <a href="mailto:ananthmpk1999@gmail.com" class="social_icon" data-aos="zoom-in-up"
-                            data-aos-duration="2500"><i class="fa-solid fa-envelope"></i></i></a>
-                        <a href="https://github.com/Ananthmpk" class="social_icon" data-aos="zoom-in-up"
-                            data-aos-duration="3000"><i class="fa-brands fa-github"></i></a>
+                        <!-- Location Item -->
+                        <div class="flex items-center gap-4 group">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-white border border-graySilver/20 rounded-xl flex items-center justify-center group-hover:border-brand group-hover:scale-105 transition-all duration-300 shadow-md">
+                                <i
+                                    class="fa-solid fa-location-dot text-charcoal text-base group-hover:text-brand transition-colors"></i>
+                            </div>
+                            <div>
+                                <span
+                                    class="block text-[10px] font-bold text-brand tracking-wider uppercase">LOCATION</span>
+                                <span class="text-sm text-charcoal">Chennai, Tamil Nadu</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <hr class="bg-white">
-                @ Anantharaj-All Right Reserved
+
+                <div class="w-full md:w-1/2 py-8 px-4 md:px-8">
+                    <form class="mx-2 pt-3 pb-1">
+                        <h2 class="contact_title p-2">Let's<span class="main_color_span"> talk</span></h2>
+
+                        <div class="input_box mb-4">
+                            <input
+                                class="w-full px-3 py-2 bg-transparent border-2 border-brand text-charcoal rounded-lg focus:outline-none placeholder-grayMid"
+                                type="text" placeholder="Full Name" required>
+                        </div>
+
+                        <div class="input_box mb-4">
+                            <input
+                                class="w-full px-3 py-2 bg-transparent border-2 border-brand text-charcoal rounded-lg focus:outline-none placeholder-grayMid"
+                                type="email" placeholder="Email Address" required>
+                        </div>
+
+                        <div class="input_box mb-4">
+                            <input
+                                class="w-full px-3 py-2 bg-transparent border-2 border-brand text-charcoal rounded-lg focus:outline-none placeholder-grayMid"
+                                type="tel" placeholder="Phone Number" required>
+                        </div>
+
+                        <div class="input_box mb-4">
+                            <textarea
+                                class="w-full px-3 py-2 bg-transparent border-2 border-brand text-charcoal rounded-lg focus:outline-none placeholder-grayMid"
+                                rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+
+                        <div class="text-center mt-3 pb-3">
+                            <button type="submit" class="portfolio-btn-wrap cursor-pointer">
+                                <span class="portfolio-btn-main">Submit</span>
+                                <span class="portfolio-btn-icon">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== Skills Ticker Marquee — Above Footer ========== -->
+    <div class="skills-ticker-section">
+        <div class="ticker-bg-slant"></div>
+        <div class="skills-ticker-wrap">
+            <div class="ticker-track">
+                <div class="ticker-list">
+                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-php"></i> PHP</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-database"></i> MySQL</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-laravel"></i> Laravel</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-gears"></i> REST APIs</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-rotate"></i> AJAX</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-github"></i> Git &amp; GitHub</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-shield-halved"></i> Web Security</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-credit-card"></i> Payment Gateways</span>
+                </div>
+                <div class="ticker-list" aria-hidden="true">
+                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-php"></i> PHP</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-database"></i> MySQL</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-laravel"></i> Laravel</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-gears"></i> REST APIs</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-rotate"></i> AJAX</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-brands fa-github"></i> Git &amp; GitHub</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-shield-halved"></i> Web Security</span>
+                    <span class="ticker-dot">✦</span>
+                    <span><i class="fa-solid fa-credit-card"></i> Payment Gateways</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== Redesigned Footer ==================== -->
+    <footer id="footer_page">
+        <div class="container mx-auto px-4 max-w-6xl">
+
+            <!-- ── Top Bar: Let's Connect + Hire Me Capsule ── -->
+            <div class="footer-top-bar">
+                <h2 class="footer-connect-heading">
+                    Let's <span class="main_color_span">Connect</span> There
+                </h2>
+                <a href="#contact_page" class="footer-hire-capsule">
+                    <span class="hire-capsule-icon">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                    <span class="hire-capsule-text">Hiii, Hire Me Now.</span>
+                </a>
             </div>
 
-        </footer>
-        <!-- -----AOS link --------- -->
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <!-- -----js link --------- -->
-        <script src="js/script.js"></script>
-        <!-- -----Bootstrap link --------- -->
-        <script src="Source/js/bootstrap.min.js"></script>
-        <!-- -----Jquery link --------- -->
-        <script src="Source/js/jquary.min.js"></script>
+            <hr class="footer-divider">
 
-        <script>
-            AOS.init();
-        </script>
+            <!-- ── 4-Column Grid ── -->
+            <div class="footer-grid">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"
-            integrity="sha512-fCRpXk4VumjVNtE0j+OyOqzPxF1eZwacU3kN3SsznRPWHgMTSSo7INc8aY03KQDBWztuMo5KjKzCFXI/a5rVYQ=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <!-- Col 1: Brand + Bio + Social Icons -->
+                <div class="footer-col">
+                    <a href="#" class="footer-brand-logo">
+                        Anantha<span class="main_color_span">Raj</span>
+                    </a>
+                    <p class="footer-bio">
+                        Building modern, scalable web applications with a focus on clean code and great user experience.
+                    </p>
+                    <p class="footer-bio" style="margin-top: 0.5rem;">
+                        Creating reliable digital solutions through thoughtful design, efficient development, and
+                        continuous learning.
+                    </p>
+                    <div class="footer-social-row">
+                        <a href="https://www.instagram.com/anantharaj__mpk/" target="_blank" class="footer-social-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/anantharaj-mohanraj-473549269/" target="_blank"
+                            class="footer-social-icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/+917094930793" target="_blank" class="footer-social-icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:ananthmpk1999@gmail.com" class="footer-social-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/Ananthmpk" target="_blank" class="footer-social-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
 
-        <script>
-            $('.mfp_popup').magnificPopup({
-                type: 'image',
-                image: {
-                    markup: '<div class="mfp-figure">' +
-                        '<div class="mfp-close"></div>' +
-                        '<div class="mfp-img"></div>' +
-                        '<div class="mfp-bottom-bar">' +
-                        '<div class="mfp-title"></div>' +
-                        '<div class="mfp-counter"></div>' +
-                        '</div>' +
-                        '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+                <!-- Col 2: Navigation Links -->
+                <div class="footer-col">
+                    <h3 class="footer-col-heading">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="#top">Home</a></li>
+                        <li><a href="#about_page">About</a></li>
+                        <li><a href="#skills_page">Skills</a></li>
+                        <li><a href="#experience_page">Experience</a></li>
+                        <li><a href="#project_page">Projects</a></li>
+                        <li><a href="#education_page">Education</a></li>
+                    </ul>
+                </div>
 
-                    cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+                <!-- Col 3: Contact Details -->
+                <div class="footer-col">
+                    <h3 class="footer-col-heading">Contact</h3>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <span class="footer-contact-icon"><i class="fa-solid fa-phone"></i></span>
+                            <a href="tel:+917094930793">+91 70949 30793</a>
+                        </li>
+                        <li>
+                            <span class="footer-contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <a href="mailto:ananthmpk1999@gmail.com">ananthmpk1999@gmail.com</a>
+                        </li>
+                        <li>
+                            <span class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span>Chennai, Tamil Nadu</span>
+                        </li>
+                    </ul>
+                </div>
 
-                    titleSrc: 'title', // Attribute of the target element that contains caption for the slide.
-                    // Or the function that should return the title. For example:
-                    // titleSrc: function(item) {
-                    //   return item.el.attr('title') + ' by Marsel Van Oosten';
-                    // }
+                <!-- Col 4: Newsletter -->
+                <div class="footer-col">
+                    <h3 class="footer-col-heading">Get Latest Information</h3>
+                    <p class="footer-bio" style="margin-bottom:1rem;">Subscribe to stay updated with my latest work and
+                        projects.</p>
+                    <form class="footer-subscribe-form"
+                        onsubmit="event.preventDefault(); this.querySelector('input').value=''; alert('Thank you for subscribing!');">
+                        <input type="email" placeholder="Email address" required class="footer-email-input">
+                        <button type="submit" class="footer-subscribe-btn">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
 
-                    verticalFit: true, // Fits image in area vertically
+            <hr class="footer-divider">
 
-                    tError: 'The image could not be loaded.' // Error message
-                }
-            });
-        </script>
+            <!-- ── Bottom Bar: Copyright + Policy Links ── -->
+            <div class="footer-bottom-bar">
+                <span>Copyright &copy; 2026 <span class="main_color_span">AnanthaRaj</span>. All Rights Reserved.</span>
+                <div class="footer-policy-links">
+                    <a href="#">User Terms &amp; Conditions</a>
+                    <span class="footer-policy-sep">|</span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- -----Libraries --------- -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- -----js link --------- -->
+    <script src="js/script.js"></script>
+    <!-- -----Jquery link --------- -->
+    <script src="Source/js/jquery.min.js"></script>
 </body>
 
 </html>
